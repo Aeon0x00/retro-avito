@@ -1,28 +1,4 @@
-# Binaries & executables
 retro-server
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-*.test
-*.out
-
-# Logs
-*.log
-server.log
 logs/
+*.log
 data.json
-
-# Temporary and backup files
-*.bak
-*.tmp
-*~
-*.swp
-*.swo
-
-# OS / Editor artifacts
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
