@@ -1,17 +1,27 @@
 package main
 
 import (
-	"fmt"
-	"log"
 	"net/http"
 	"os"
 
 	"retro/internal/httpserver"
+	"retro/internal/logger"
 	"retro/internal/repository/memory"
 	"retro/internal/usecase"
 )
 
 func main() {
+	logLevel := os.Getenv("LOG_LEVEL")
+	if logLevel == "" {
+		logLevel = "info"
+	}
+
+	log, closeLog, err := logger.NewLogger(logLevel)
+	if err != nil {
+		os.Exit(1)
+	}
+	defer closeLog()
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
@@ -26,10 +36,7 @@ func main() {
 	handler := httpserver.NewHandler(uc)
 	router := httpserver.SetupRouter(handler, ".")
 
-	fmt.Println("==========================================================")
-	fmt.Println("🚀 Сервер «Полки коллекционеров Авито» запущен (Clean Architecture)")
-	fmt.Println("👉 Открой в браузере: http://localhost:" + port)
-	fmt.Println("==========================================================")
+	log.Infof("server started on port %s (http://localhost:%s)", port, port)
 
 	if err := http.ListenAndServe(":"+port, router); err != nil {
 		log.Fatalf("server error: %v", err)
