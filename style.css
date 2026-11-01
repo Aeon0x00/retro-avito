@@ -1,0 +1,325 @@
+:root {
+      --avito-blue: #00aaff;
+      --avito-blue-hover: #0095e0;
+      --avito-green: #04b855;
+      --avito-red: #ff4053;
+      --avito-purple: #9b51e0;
+      --avito-text: #141414;
+      --avito-muted: #757575;
+      --avito-border: #e3e2e1;
+      --avito-bg: #f5f5f5;
+      --avito-pill-bg: #f2f1f0;
+      --avito-pill-hover: #e5e4e2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--avito-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input, select, textarea { font-family: inherit; font-size: 14px; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--avito-blue);
+      outline-offset: 2px;
+    }
+
+    
+    .demo-bar {
+      background: #14181f; color: #cbd5e1; padding: 6px 16px; font-size: 12px;
+      border-bottom: 1px solid #283344; position: sticky; top: 0; z-index: 2000;
+    }
+    .demo-inner {
+      max-width: 1360px; margin: 0 auto; display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .demo-select, .demo-btn {
+      background: #283344; color: #fff; border: 1px solid #3b4b61;
+      border-radius: 6px; padding: 4px 8px; font-size: 12px; cursor: pointer;
+    }
+    .demo-btn.active { background: var(--avito-blue); border-color: #fff; }
+    .demo-btn.danger { background: #991b1b; border-color: #ef4444; }
+
+    
+    .top-nav {
+      max-width: 1360px; margin: 0 auto; padding: 8px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; color: #4a4a4a; border-bottom: 1px solid #f0f0f0;
+    }
+    .top-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .top-link { cursor: pointer; color: #4a4a4a; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+    .top-link:hover { color: var(--avito-blue); }
+
+    
+    .header-row {
+      max-width: 1360px; margin: 8px auto 14px; padding: 0 16px;
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .brand-logo {
+      display: inline-flex; align-items: center; gap: 6px;
+      cursor: pointer; border: none; background: none; padding: 0;
+    }
+    .brand-dots { display: grid; grid-template-columns: 8px 8px; gap: 3px; }
+    .dot-g { width: 8px; height: 8px; border-radius: 50%; background: #04b855; }
+    .dot-b { width: 8px; height: 8px; border-radius: 50%; background: #00aaff; }
+    .dot-r { width: 8px; height: 8px; border-radius: 50%; background: #ff4053; }
+    .dot-p { width: 8px; height: 8px; border-radius: 50%; background: #9b51e0; }
+    .brand-text { font-size: 26px; font-weight: 900; letter-spacing: -0.7px; color: #141414; }
+
+    .btn-all-categories {
+      background: var(--avito-blue); color: #fff; border: none; border-radius: 12px;
+      padding: 10px 18px; font-weight: 700; font-size: 14.5px; display: inline-flex;
+      align-items: center; gap: 8px; cursor: pointer; transition: background 0.15s; flex-shrink: 0;
+    }
+    .btn-all-categories:hover { background: var(--avito-blue-hover); }
+
+    .search-box-wrap {
+      flex: 1; min-width: 260px; display: flex; border: 2px solid var(--avito-blue);
+      border-radius: 12px; overflow: hidden; height: 44px; background: #fff;
+    }
+    .search-box-wrap input {
+      flex: 1; border: none; padding: 0 14px; font-size: 14.5px; outline: none;
+    }
+    .search-btn {
+      background: var(--avito-blue); color: #fff; border: none;
+      padding: 0 24px; font-weight: 700; font-size: 15px; cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .search-btn:hover { background: var(--avito-blue-hover); }
+
+    .city-select-btn {
+      display: inline-flex; align-items: center; gap: 6px; font-weight: 600;
+      font-size: 14px; color: #141414; background: none; border: none;
+      cursor: pointer; padding: 6px 10px; border-radius: 8px; flex-shrink: 0;
+    }
+    .city-select-btn:hover { background: #f2f1f0; }
+
+    
+    .page-container {
+      max-width: 1360px; margin: 0 auto 60px; padding: 0 16px;
+    }
+
+    
+    .category-heading {
+      font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin: 18px 0 18px;
+      display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    }
+    .category-count { color: #8c8c8c; font-weight: 500; font-size: 28px; }
+
+    
+    .hero-categories-layout {
+      display: grid; grid-template-columns: 1fr 280px; gap: 24px; align-items: start; margin-bottom: 24px;
+    }
+    .pills-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;
+    }
+    .pill-card {
+      background: var(--avito-pill-bg); border-radius: 16px; padding: 10px 10px 8px 12px;
+      height: 84px; display: flex; flex-direction: column; justify-content: space-between;
+      cursor: pointer; position: relative; overflow: hidden; transition: background 0.15s, transform 0.1s;
+      user-select: none; border: 1.5px solid transparent; text-decoration: none;
+    }
+    .pill-card:hover { background: var(--avito-pill-hover); transform: translateY(-1px); }
+    .pill-card.active { border-color: var(--avito-blue); background: #ebf7ff; }
+    .pill-label {
+      font-size: 13px; font-weight: 600; line-height: 1.25; color: #141414; max-width: 82px; z-index: 2;
+    }
+    .pill-img {
+      position: absolute; right: 2px; bottom: 0px; width: 56px; height: 56px;
+      object-fit: contain; z-index: 1; pointer-events: none; border-radius: 6px;
+    }
+    .hero-legal-sidebar {
+      font-size: 11.5px; line-height: 1.5; color: #8c8c8c; padding-top: 2px;
+    }
+    .hero-legal-sidebar a {
+      color: #141414; text-decoration: none; display: block; margin-top: 5px; font-weight: 500; font-size: 12px;
+    }
+    .hero-legal-sidebar a:hover { color: var(--avito-blue); }
+
+    
+    .promo-banners-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 26px;
+    }
+    .avito-feature-card {
+      border-radius: 20px; padding: 22px 26px; position: relative; overflow: hidden;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .avito-feature-card.wish-theme {
+      background: linear-gradient(135deg, #eff6ff 0%, #e0edff 100%);
+      border: 1px solid #bfdbfe;
+    }
+    .avito-feature-card.help-theme {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+    }
+    .feature-card-content { max-width: 82%; z-index: 2; }
+    .feature-badge {
+      display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 4px 10px; border-radius: 12px;
+      background: rgba(0, 170, 255, 0.15); color: #0077b6; margin-bottom: 8px;
+    }
+    .feature-badge.badge-green {
+      background: rgba(4, 184, 85, 0.15); color: #037a38;
+    }
+    .feature-title {
+      font-size: 19px; font-weight: 800; margin: 0 0 6px; color: #141414; letter-spacing: -0.3px;
+    }
+    .feature-desc {
+      font-size: 13.5px; color: #475569; margin: 0 0 14px; line-height: 1.45;
+    }
+    .feature-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .btn-green {
+      background: var(--avito-green); color: #fff; border: none; border-radius: 10px;
+      padding: 9px 18px; font-weight: 700; cursor: pointer; transition: background 0.15s;
+    }
+    .btn-green:hover { background: #039f48; }
+    .btn-outline-dark {
+      background: #ffffff; color: #141414; border: 1.5px solid #cbd5e1;
+      border-radius: 10px; padding: 8px 16px; font-weight: 600; cursor: pointer;
+    }
+    .btn-outline-dark:hover { background: #f8fafc; border-color: #94a3b8; }
+    .art-circle {
+      width: 60px; height: 60px; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; font-size: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06); flex-shrink: 0;
+    }
+    .art-circle.wish-circle { background: #ffffff; color: var(--avito-blue); }
+    .art-circle.help-circle { background: #ffffff; color: var(--avito-green); }
+
+    
+    .avito-filter-chips {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; align-items: center;
+      border-bottom: 1px solid var(--avito-border); padding-bottom: 14px;
+    }
+    .chip-btn {
+      background: #f2f1f0; border: none; border-radius: 20px; padding: 8px 16px;
+      font-size: 13.5px; font-weight: 600; color: #141414; cursor: pointer;
+      transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .chip-btn:hover { background: #e5e4e2; }
+    .chip-btn.active { background: #141414; color: #ffffff; }
+
+    
+    .section-title-arrow {
+      font-size: 22px; font-weight: 800; margin: 0 0 16px; display: inline-flex;
+      align-items: center; gap: 8px; color: #141414;
+    }
+
+    
+    .goods-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .card {
+      background: #fff; border: 1px solid #eee; border-radius: 12px;
+      padding: 12px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: transform 0.15s, box-shadow 0.15s; position: relative;
+    }
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    }
+    .card-media {
+      height: 200px; background: #f8f8f8; border-radius: 10px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      margin-bottom: 10px; position: relative; padding: 6px;
+    }
+    .card-media img {
+      max-width: 100%; max-height: 100%; width: auto; height: auto;
+      object-fit: contain; transition: transform 0.2s ease;
+    }
+    .card:hover .card-media img {
+      transform: scale(1.03);
+    }
+    .card-fav-btn {
+      position: absolute; top: 8px; right: 8px; width: 32px; height: 32px;
+      border-radius: 50%; background: rgba(255,255,255,0.85); border: none;
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      font-size: 16px; color: #757575; transition: transform 0.1s, color 0.1s;
+      backdrop-filter: blur(4px);
+    }
+    .card-fav-btn:hover { color: #ff4053; transform: scale(1.1); }
+    .card-fav-btn.active { color: #ff4053; }
+    .item-price-tag {
+      font-size: 18px; font-weight: 800; color: #141414; margin-bottom: 4px;
+    }
+    .item-geo-date {
+      font-size: 12px; color: #8c8c8c; margin-top: 6px;
+    }
+
+    
+    .floating-help-widget {
+      position: fixed; bottom: 24px; right: 28px; z-index: 1500;
+      background: #141414; color: #fff; border-radius: 28px; padding: 10px 20px;
+      font-size: 13.5px; font-weight: 700; box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+      cursor: pointer; display: flex; align-items: center; gap: 8px;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .floating-help-widget:hover { transform: scale(1.03); background: #262626; }
+
+    
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;
+      font-size: 13px; cursor: pointer; border: none; transition: 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-primary { background: var(--avito-blue); color: #fff; }
+    .btn-primary:hover { background: var(--avito-blue-hover); }
+    .btn-secondary { background: #f0f0f0; color: #141414; }
+    .btn-secondary:hover { background: #e5e5e5; }
+    .btn-dark { background: #141414; color: #fff; }
+    .btn-dark:hover { background: #333; }
+    .btn-outline { background: #fff; border: 1px solid var(--avito-border); color: #141414; }
+    .btn-outline:hover { background: #f9f9f9; }
+    .btn-danger { background: var(--avito-red); color: #fff; }
+
+    .badge {
+      display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11.5px;
+      font-weight: 600;
+    }
+    .b-private { background: #f1f5f9; color: #475569; }
+    .b-public { background: #e0f2fe; color: #0284c7; }
+    .b-archive { background: #fef3c7; color: #b45309; }
+    .b-wish { background: #fce7f3; color: #be185d; }
+    .b-helpful { background: #dcfce7; color: #15803d; }
+
+    .toast-box {
+      position: fixed; bottom: 80px; right: 24px; background: #1e293b; color: #fff;
+      padding: 12px 18px; border-radius: 8px; font-size: 13px; z-index: 3000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); animation: fadeIn 0.2s ease;
+    }
+
+    
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2500;
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+    }
+    .modal-card {
+      background: #fff; border-radius: 12px; max-width: 560px; width: 100%;
+      padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); position: relative;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 13px; }
+    .form-input, .form-textarea, .form-select {
+      width: 100%; padding: 8px 10px; border: 1px solid var(--avito-border);
+      border-radius: 6px; font-size: 13.5px;
+    }
+    .form-textarea { resize: vertical; min-height: 80px; }
+
+    @media (max-width: 1200px) {
+      .pills-grid { grid-template-columns: repeat(4, 1fr); }
+      .promo-banners-row { grid-template-columns: 1fr; }
+      .goods-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero-categories-layout { grid-template-columns: 1fr; }
+      .hero-legal-sidebar { display: none; }
+      .pills-grid { grid-template-columns: repeat(2, 1fr); }
+      .goods-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .goods-grid { grid-template-columns: 1fr; }
+    }
