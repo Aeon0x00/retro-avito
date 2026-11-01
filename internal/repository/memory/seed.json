@@ -1,0 +1,469 @@
+{
+  "categories": [
+    {
+      "id": "models",
+      "title": "Ретро-модели",
+      "img": "images/volga.jpg",
+      "count": "8 430"
+    },
+    {
+      "id": "coins",
+      "title": "Монеты и боны",
+      "img": "images/coin.jpg",
+      "count": "18 400"
+    },
+    {
+      "id": "marks",
+      "title": "Марки и открытки",
+      "img": "images/mark.jpg",
+      "count": "14 120"
+    },
+    {
+      "id": "porcelain",
+      "title": "Фарфор и сервизы",
+      "img": "images/service.jpg",
+      "count": "11 850"
+    },
+    {
+      "id": "carpets",
+      "title": "Ковры и текстиль",
+      "img": "images/kover.jpg",
+      "count": "6 320"
+    },
+    {
+      "id": "glass",
+      "title": "Винтажное стекло",
+      "img": "images/wine.jpg",
+      "count": "9 410"
+    },
+    {
+      "id": "pokemon",
+      "title": "Карточки и комиксы",
+      "img": "images/pokemon.jpg",
+      "count": "7 900"
+    },
+    {
+      "id": "books",
+      "title": "Букинистика",
+      "img": "images/bag.jpg",
+      "count": "22 600"
+    },
+    {
+      "id": "typer",
+      "title": "Ретро-техника",
+      "img": "images/typer.jpg",
+      "count": "5 120"
+    },
+    {
+      "id": "jewelry",
+      "title": "Ювелирный антиквариат",
+      "img": "images/egg.jpg",
+      "count": "16 700"
+    },
+    {
+      "id": "soviet_auto",
+      "title": "Советский автовинтаж",
+      "img": "images/kopeika.jpg",
+      "count": "4 800"
+    },
+    {
+      "id": "all_cat",
+      "title": "Все категории →",
+      "isAll": true,
+      "count": "148 350"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_volga",
+      "ownerId": "user_alex",
+      "ownerName": "Алексей",
+      "title": "ГАЗ-24 «Волга» чёрная (А14) 1:43 Саратов",
+      "category": "models",
+      "model": "ГАЗ-24 Волга",
+      "manufacturer": "Завод «Радон» / Агат",
+      "series": "Номерная А14, ранний выпуск СССР (1978)",
+      "scale": "1:43",
+      "completeness": "С родной номерной коробкой, хромированные бамперы",
+      "condition": "Идеальное коллекционное состояние, без цинковой чумы и сколов",
+      "privateNote": "Личная заметка: куплена в коллекцию в 1988 году. Не продаётся.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/volga.jpg",
+      "price": "20 000 000₽",
+      "location": "Москва, м. Маяковская",
+      "date": "Сегодня в 15:40",
+      "linkedListingId": "",
+      "likes": [
+        "user_olga"
+      ]
+    },
+    {
+      "id": "item_kopeika",
+      "ownerId": "user_alex",
+      "ownerName": "Алексей",
+      "title": "ВАЗ-2101 «Жигули / Копейка» (А9) 1:43",
+      "category": "models",
+      "model": "ВАЗ-2101 Копейка",
+      "manufacturer": "Завод «Тантал» (Саратов)",
+      "series": "Каталожный номер А9, раннее металлическое дно",
+      "scale": "1:43",
+      "completeness": "Полный заводской комплект с оригинальным клапаном",
+      "condition": "Отличное коллекционное, яркая заводская эмаль",
+      "privateNote": "Личная заметка: оригинальный чекан донышка.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/kopeika.jpg",
+      "price": "10 000 000₽",
+      "location": "Москва, м. Сокольники",
+      "date": "Сегодня в 14:50",
+      "linkedListingId": "",
+      "likes": []
+    },
+    {
+      "id": "item_corvette",
+      "ownerId": "user_olga",
+      "ownerName": "Ольга",
+      "title": "Chevrolet Corvette Stingray 1969 Classic (1:43)",
+      "category": "models",
+      "model": "Corvette Stingray 1969",
+      "manufacturer": "AutoArt / Classic Models",
+      "series": "Лимитированная серия винтажных спорткаров",
+      "scale": "1:43",
+      "completeness": "В прозрачном акриловом боксе с подиумом",
+      "condition": "Новое коллекционное состояние Mint",
+      "privateNote": "Редкая версия с детальным салоном.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/corvette.webp",
+      "price": "28 500 000₽",
+      "location": "Москва, м. Арбатская",
+      "date": "Сегодня в 13:20",
+      "linkedListingId": "",
+      "likes": [
+        "user_alex"
+      ]
+    },
+    {
+      "id": "item_egg",
+      "ownerId": "user_alex",
+      "ownerName": "Алексей",
+      "title": "Ювелирное пасхальное яйцо в стиле Фаберже",
+      "category": "jewelry",
+      "model": "Яйцо Фаберже винтаж",
+      "manufacturer": "Ювелирные мастерские Санкт-Петербурга",
+      "series": "Гильошированная эмаль, позолота 24К, кристаллы",
+      "scale": "Ювелирный антиквариат",
+      "completeness": "С резной подставкой в подарочном бархатном футляре",
+      "condition": "Идеальное, музейная сохранность, ручная ювелирная работа",
+      "privateNote": "Семейная реликвия, верхняя полка витрины.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/egg.jpg",
+      "price": "185 000 ₽",
+      "location": "Санкт-Петербург, м. Невский проспект",
+      "date": "Вчера в 18:30",
+      "linkedListingId": "",
+      "likes": [
+        "user_olga"
+      ]
+    },
+    {
+      "id": "item_service",
+      "ownerId": "user_olga",
+      "ownerName": "Ольга",
+      "title": "Старинный фарфоровый сервиз «Мадонна» винтаж",
+      "category": "porcelain",
+      "model": "Чайный сервиз Мадонна",
+      "manufacturer": "Kahla / Porzellanfabrik (ГДР)",
+      "series": "Винтаж 1970-х, перламутровая глазурь, роспись золотом",
+      "scale": "Посуда",
+      "completeness": "Полный чайный сервиз на 6 персон (15 предметов)",
+      "condition": "Идеальное коллекционное состояние, сервантное хранение",
+      "privateNote": "Оригинальные заводские клейма Kahla на каждом предмете.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/service.jpg",
+      "price": "65 000 ₽",
+      "location": "Москва, м. Тверская",
+      "date": "Сегодня в 12:10",
+      "linkedListingId": "",
+      "likes": [
+        "user_alex"
+      ]
+    },
+    {
+      "id": "item_typer",
+      "ownerId": "user_ivan",
+      "ownerName": "Иван",
+      "title": "Винтажная портативная пишущая машинка Continental",
+      "category": "typer",
+      "model": "Continental Klein-Schreibmaschine",
+      "manufacturer": "Wanderer-Werke (Германия, 1930-е гг.)",
+      "series": "Довоенная механическая классика",
+      "scale": "Техника",
+      "completeness": "В оригинальном деревянном транспортировочном кофре",
+      "condition": "Отличное, механизм полностью смазан и исправен, чёткий шрифт",
+      "privateNote": "Рабочая двухцветная лента установлена. Не продаётся.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/typer.jpg",
+      "price": "48 000 ₽",
+      "location": "Москва, м. Китай-город",
+      "date": "28 октября",
+      "linkedListingId": "",
+      "likes": []
+    },
+    {
+      "id": "item_coin",
+      "ownerId": "user_alex",
+      "ownerName": "Алексей",
+      "title": "Один полтинник 1924 г. ТР (Серебро 900 пробы)",
+      "category": "coins",
+      "model": "Полтинник 1924",
+      "manufacturer": "Ленинградский монетный двор (Бирмингемский чекан)",
+      "series": "Оригинальный чекан СССР, сохранность XF/UNC",
+      "scale": "Монета",
+      "completeness": "В защитной капсуле Leuchtturm",
+      "condition": "Отличное, яркий штемпельный блеск, чистый гурт",
+      "privateNote": "Личная заметка: куплен на съезде нумизматов, вес 10.02 г.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/coin.jpg",
+      "price": "18 500 ₽",
+      "location": "Москва, м. Арбатская",
+      "date": "Сегодня в 14:15",
+      "linkedListingId": "",
+      "likes": [
+        "user_olga"
+      ]
+    },
+    {
+      "id": "item_mark",
+      "ownerId": "user_alex",
+      "ownerName": "Алексей",
+      "title": "Почтовая марка СССР 1961 г. «Первый полёт Гагарина»",
+      "category": "marks",
+      "model": "Космос 1961",
+      "manufacturer": "Гознак СССР",
+      "series": "Серия «Космические полеты», чистая MNH",
+      "scale": "Марка",
+      "completeness": "В защитном клеммташе Safe",
+      "condition": "Идеальное MNH люкс, оригинальный клей без наклеек и следов",
+      "privateNote": "Личная заметка: подарок дедушки. Хранить при влажности 50%.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/mark.jpg",
+      "price": "14 000 ₽",
+      "location": "Москва, м. Тверская",
+      "date": "Сегодня в 11:30",
+      "linkedListingId": "",
+      "likes": []
+    },
+    {
+      "id": "item_kover",
+      "ownerId": "user_olga",
+      "ownerName": "Ольга",
+      "title": "Персидский шерстяной ковёр «Тебриз» ручной вязки",
+      "category": "carpets",
+      "model": "Тебриз 150х220",
+      "manufacturer": "Мастера Тебриза (Иран)",
+      "series": "Винтаж 1970-х, натуральные растительные красители",
+      "scale": "Текстиль",
+      "completeness": "Плотный шёлково-шерстяной ворс, сертификат",
+      "condition": "Отличное коллекционное состояние, без реставраций",
+      "privateNote": "Личная заметка: бережная сухая чистка.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/kover.jpg",
+      "price": "145 000 ₽",
+      "location": "Москва, м. Чистые пруды",
+      "date": "28 октября",
+      "linkedListingId": "",
+      "likes": []
+    },
+    {
+      "id": "item_wine",
+      "ownerId": "user_ivan",
+      "ownerName": "Иван",
+      "title": "Старинный стеклянный штоф-графин XIX века",
+      "category": "glass",
+      "model": "Штоф выдувной",
+      "manufacturer": "Гутенский стекольный завод",
+      "series": "Российская империя, конец XIX в.",
+      "scale": "Стекло",
+      "completeness": "С родной притёртой стеклянной пробкой",
+      "condition": "Пузырьковое выдувное стекло, без трещин и сколов",
+      "privateNote": "Не продаётся, экспонат домашнего музея.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/wine.jpg",
+      "price": "35 000 ₽",
+      "location": "Москва, м. Китай-город",
+      "date": "27 октября",
+      "linkedListingId": "",
+      "likes": []
+    },
+    {
+      "id": "item_pokemon",
+      "ownerId": "user_alex",
+      "ownerName": "Алексей",
+      "title": "Карточка Pokémon 1998 (First Edition Mint 9.5)",
+      "category": "pokemon",
+      "model": "Base Set 1998",
+      "manufacturer": "Wizards of the Coast",
+      "series": "Shadowless Holographic",
+      "scale": "Карта",
+      "completeness": "В акриловом слабе с сертификатом грейда PSA 9.5",
+      "condition": "Коллекционный грейд Gem Mint",
+      "privateNote": "Инвестиционный раритет, убран в сейф.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/pokemon.jpg",
+      "price": "85 000 ₽",
+      "location": "Москва, м. Университет",
+      "date": "Вчера в 16:10",
+      "linkedListingId": "",
+      "likes": [
+        "user_olga"
+      ]
+    },
+    {
+      "id": "item_bag",
+      "ownerId": "user_ivan",
+      "ownerName": "Иван",
+      "title": "Коллекционный альбом Murena (Первое издание, хардковер)",
+      "category": "books",
+      "model": "Murena Album",
+      "manufacturer": "Издательство Dargaud",
+      "series": "Франко-бельгийская графическая классика",
+      "scale": "Книга",
+      "completeness": "Твёрдый переплёт, мелованная бумага, суперобложка",
+      "condition": "Идеальное состояние книжного блока",
+      "privateNote": "Куплен в Брюсселе в антикварной лавке.",
+      "visibility": "public",
+      "modelCode": "custom",
+      "customPhoto": "images/bag.jpg",
+      "price": "22 000 ₽",
+      "location": "Москва, м. Сокольники",
+      "date": "26 октября",
+      "linkedListingId": "",
+      "likes": []
+    }
+  ],
+  "wishes": [
+    {
+      "id": "wish_1",
+      "authorId": "user_alex",
+      "authorName": "Алексей",
+      "title": "Ищу Москвич-408 (А1) с белым салоном и хромированной решёткой",
+      "version": "Ранний саратовский выпуск 1973–1976 гг., номерное дно А1",
+      "conditionDiff": "Без следов цинковой чумы (вздутий металла), ровные дверцы",
+      "budget": "до 8 500 ₽ (необязательно)",
+      "visibility": "public",
+      "status": "active",
+      "modelCode": "moskvich",
+      "proposals": [
+        {
+          "id": "prop_1",
+          "authorId": "user_viktor",
+          "authorName": "Виктор (Продавец)",
+          "listingId": "list_1",
+          "explanation": "У моего экземпляра номерное металлическое дно А1 и белый салон без трещин, фото донышка в объявлении.",
+          "sellerInterest": "Это моё собственное объявление о продаже",
+          "createdAt": "30.10.2026 11:20"
+        },
+        {
+          "id": "prop_2",
+          "authorId": "user_olga",
+          "authorName": "Ольга",
+          "listingId": "list_2",
+          "explanation": "Видела подходящий ранний А1 с коробкой, но продавец уже снял лот.",
+          "sellerInterest": "Чужое объявление (без личного торгового интереса)",
+          "createdAt": "29.10.2026 18:10"
+        }
+      ]
+    },
+    {
+      "id": "wish_2",
+      "authorId": "user_alex",
+      "authorName": "Алексей",
+      "title": "Личный поиск: Оригинальная синяя коробочка Тантал для ГАЗ-24 (А14)",
+      "version": "Коробка 1980–1984 гг. со штампом ОТК",
+      "conditionDiff": "С целыми боковыми клапанами",
+      "budget": "Не указан",
+      "visibility": "private",
+      "status": "active",
+      "modelCode": "volga",
+      "proposals": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_1",
+      "authorId": "user_alex",
+      "authorName": "Алексей",
+      "title": "Как по фотографии донышка отличить ранний «Тантал» А1 от новодела 90-х?",
+      "context": "Смотрю объявление о продаже Москвича-408 1:43. Продавец пишет, что 1976 год, но шрифт на днище кажется тонким.",
+      "linkedType": "item",
+      "linkedId": "item_1",
+      "status": "open",
+      "createdAt": "30.10.2026 10:15",
+      "replies": [
+        {
+          "id": "rep_1",
+          "versionId": "v1",
+          "authorId": "user_boris",
+          "authorName": "Борис",
+          "text": "На раннем саратовском Москвиче А1 до 1978 года надпись «Сделано в СССР» отлита крупным рубленным шрифтом, а крепление днища идёт через винт с плоским шлицем. На фото из объявления позднее днище — лучше отказаться от покупки, если ищете ранний А1.",
+          "sourceUrl": "https://rcforum-example.ru/tantal-a1-guide",
+          "sellerDisclosure": "Помогаю без продажи (нет своей полки и объявлений)",
+          "createdAt": "30.10.2026 10:42",
+          "helpfulByAuthor": true,
+          "clarifications": [
+            {
+              "id": "cl_1",
+              "authorName": "Алексей",
+              "text": "Спасибо! А капот у раннего выпуска всегда открывается?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2",
+      "authorId": "user_olga",
+      "authorName": "Ольга",
+      "title": "Чем безопасно убрать следы старого клея с прозрачного остекления РАФ-2203 1:43?",
+      "context": "Купила модель с рук, на лобовом стекле след от ценника. Боюсь, что растворитель сделает пластик мутным.",
+      "linkedType": "none",
+      "linkedId": "",
+      "status": "open",
+      "createdAt": "30.10.2026 12:00",
+      "replies": []
+    }
+  ],
+  "recognitions": [
+    {
+      "rewardId": "rew_q1_boris",
+      "questionId": "q_1",
+      "questionTitle": "Как по фотографии донышка отличить ранний «Тантал» А1 от новодела 90-х?",
+      "recipientId": "user_boris",
+      "recipientName": "Борис",
+      "markedByAuthorName": "Алексей",
+      "supportingReplyIds": [
+        "rep_1"
+      ],
+      "supportingVersionIds": [
+        "v1"
+      ],
+      "status": "active_private",
+      "archived": false,
+      "consentVersion": null,
+      "decisionId": null,
+      "revokeReason": "",
+      "appealStatus": null,
+      "updatedAt": "30.10.2026 10:56"
+    }
+  ]
+}

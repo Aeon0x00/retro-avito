@@ -904,6 +904,22 @@
       const [pendingAction, setPendingAction] = useState(null);
       const [toast, setToast] = useState('');
       useEffect(() => {
+        fetch('/api/data')
+          .then(res => res.ok ? res.json() : null)
+          .then(apiState => {
+            if (apiState && Array.isArray(apiState.items)) {
+              setData(prev => ({
+                ...prev,
+                items: apiState.items.map(it => ({ ...it, customPhoto: getPhotoUrl(it.customPhoto) })),
+                wishes: apiState.wishes || prev.wishes,
+                questions: apiState.questions || prev.questions,
+                recognitions: apiState.recognitions || prev.recognitions
+              }));
+            }
+          })
+          .catch(() => {});
+      }, []);
+      useEffect(() => {
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
       }, [data]);
       const notify = (msg) => {
@@ -1433,6 +1449,7 @@
                       likes: existing ? existing.likes : []
                     };
                     setData(prev => ({ ...prev, items: existing ? prev.items.map(i => i.id === itemId ? saved : i) : [saved, ...prev.items] }));
+                    fetch('/api/items', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(saved) }).catch(() => {});
                     setFormDirty(false);
                     notify('Модель сохранена лично (видна только вам).');
                     navigateTo('S03', itemId, true);
@@ -1453,6 +1470,7 @@
                       likes: []
                     };
                     setData(prev => ({ ...prev, items: [saved, ...prev.items.filter(i => i.id !== itemId)] }));
+                    fetch('/api/items', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(saved) }).catch(() => {});
                     setFormDirty(false);
                     setActiveId(itemId);
                     setScreen('S03');
@@ -2129,6 +2147,7 @@
                                   ...prev,
                                   items: prev.items.map(it => it.id === item.id ? { ...it, likes: newLikes } : it)
                                 }));
+                                fetch('/api/items/like', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ itemId: item.id, userId: 'user_alex' }) }).catch(() => {});
                                 notify(isLiked ? 'Удалено из избранного' : 'Добавлено в избранное');
                               }}
                             >

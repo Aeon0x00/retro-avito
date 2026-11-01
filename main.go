@@ -5,6 +5,10 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	deliveryHttp "retro/internal/delivery/http"
+	"retro/internal/repository/memory"
+	"retro/internal/usecase"
 )
 
 func main() {
@@ -13,15 +17,21 @@ func main() {
 		port = "8080"
 	}
 
-	fs := http.FileServer(http.Dir("."))
-	http.Handle("/", fs)
+	repo, err := memory.NewStore("data.json")
+	if err != nil {
+		log.Fatalf("failed to initialize repository: %v", err)
+	}
+
+	uc := usecase.NewCatalogUseCase(repo)
+	handler := deliveryHttp.NewHandler(uc)
+	router := deliveryHttp.SetupRouter(handler, ".")
 
 	fmt.Println("==========================================================")
-	fmt.Println("🚀 Сервер «Полки коллекционеров Авито» запущен!")
+	fmt.Println("🚀 Сервер «Полки коллекционеров Авито» запущен (Clean Architecture)")
 	fmt.Println("👉 Открой в браузере: http://localhost:" + port)
 	fmt.Println("==========================================================")
 
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
-		log.Fatalf("Ошибка при запуске сервера: %v", err)
+	if err := http.ListenAndServe(":"+port, router); err != nil {
+		log.Fatalf("server error: %v", err)
 	}
 }

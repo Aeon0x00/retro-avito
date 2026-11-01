@@ -11,6 +11,7 @@ retro-server
 # Logs
 *.log
 server.log
+data.json
 
 # Temporary and backup files
 *.bak
