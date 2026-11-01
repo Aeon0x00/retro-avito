@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	deliveryHttp "retro/internal/delivery/http"
+	"retro/internal/httpserver"
 	"retro/internal/repository/memory"
 	"retro/internal/usecase"
 )
@@ -23,8 +23,8 @@ func main() {
 	}
 
 	uc := usecase.NewCatalogUseCase(repo)
-	handler := deliveryHttp.NewHandler(uc)
-	router := deliveryHttp.SetupRouter(handler, ".")
+	handler := httpserver.NewHandler(uc)
+	router := httpserver.SetupRouter(handler, ".")
 
 	fmt.Println("==========================================================")
 	fmt.Println("🚀 Сервер «Полки коллекционеров Авито» запущен (Clean Architecture)")

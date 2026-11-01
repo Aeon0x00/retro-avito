@@ -1,4 +1,4 @@
-package http_test
+package httpserver_test
 
 import (
 	"bytes"
@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	deliveryHttp "retro/internal/delivery/http"
 	"retro/internal/domain"
+	"retro/internal/httpserver"
 	"retro/internal/repository/memory"
 	"retro/internal/usecase"
 )
@@ -20,8 +20,8 @@ func TestHTTPRouter_GetStateAndCreateItem(t *testing.T) {
 	}
 
 	uc := usecase.NewCatalogUseCase(store)
-	handler := deliveryHttp.NewHandler(uc)
-	router := deliveryHttp.SetupRouter(handler, ".")
+	handler := httpserver.NewHandler(uc)
+	router := httpserver.SetupRouter(handler, ".")
 
 	req := httptest.NewRequest(http.MethodGet, "/api/data", nil)
 	rec := httptest.NewRecorder()
