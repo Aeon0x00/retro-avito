@@ -38,7 +38,7 @@
       outline-offset: 2px;
     }
 
-    /* Служебная панель для проверки учебных ролей и режимов C1/C2 */
+    
     .demo-bar {
       background: #14181f; color: #cbd5e1; padding: 6px 16px; font-size: 12px;
       border-bottom: 1px solid #283344; position: sticky; top: 0; z-index: 2000;
@@ -54,7 +54,7 @@
     .demo-btn.active { background: var(--avito-blue); border-color: #fff; }
     .demo-btn.danger { background: #991b1b; border-color: #ef4444; }
 
-    /* Верхняя микро-строчка Авито со скриншота */
+    
     .top-nav {
       max-width: 1360px; margin: 0 auto; padding: 8px 16px;
       display: flex; align-items: center; justify-content: space-between;
@@ -64,7 +64,7 @@
     .top-link { cursor: pointer; color: #4a4a4a; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
     .top-link:hover { color: var(--avito-blue); }
 
-    /* Шапка Авито: Логотип, Каталог, Поиск, Город */
+    
     .header-row {
       max-width: 1360px; margin: 8px auto 14px; padding: 0 16px;
       display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
@@ -108,19 +108,19 @@
     }
     .city-select-btn:hover { background: #f2f1f0; }
 
-    /* Контейнер страницы */
+    
     .page-container {
       max-width: 1360px; margin: 0 auto 60px; padding: 0 16px;
     }
 
-    /* Заголовок категории Авито с числом (как «Электроника в Альметьевске 502 396») */
+    
     .category-heading {
       font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin: 18px 0 18px;
       display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
     }
     .category-count { color: #8c8c8c; font-weight: 500; font-size: 28px; }
 
-    /* Верхний блок: 12 категорий слева + юридический блок справа со скриншота */
+    
     .hero-categories-layout {
       display: grid; grid-template-columns: 1fr 280px; gap: 24px; align-items: start; margin-bottom: 24px;
     }
@@ -150,7 +150,7 @@
     }
     .hero-legal-sidebar a:hover { color: var(--avito-blue); }
 
-    /* ФИРМЕННЫЙ ДВУХБЛОЧНЫЙ БАННЕР АВИТО: КУДА ВЫВЕДЕНЫ «ИЩУ» И «СЦЕНАРИЙ ПОМОЩИ» */
+    
     .promo-banners-row {
       display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 26px;
     }
@@ -201,7 +201,7 @@
     .art-circle.wish-circle { background: #ffffff; color: var(--avito-blue); }
     .art-circle.help-circle { background: #ffffff; color: var(--avito-green); }
 
-    /* ФИЛЬТРЫ-ЧИПСЫ НАД ВИТРИНОЙ */
+    
     .avito-filter-chips {
       display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; align-items: center;
       border-bottom: 1px solid var(--avito-border); padding-bottom: 14px;
@@ -214,13 +214,13 @@
     .chip-btn:hover { background: #e5e4e2; }
     .chip-btn.active { background: #141414; color: #ffffff; }
 
-    /* Заголовки со стрелочкой (как «Ноутбуки со скидками ➔») */
+    
     .section-title-arrow {
       font-size: 22px; font-weight: 800; margin: 0 0 16px; display: inline-flex;
       align-items: center; gap: 8px; color: #141414;
     }
 
-    /* СЕТКА ТОВАРОВ АВИТО (4 колонки) */
+    
     .goods-grid {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
     }
@@ -260,7 +260,7 @@
       font-size: 12px; color: #8c8c8c; margin-top: 6px;
     }
 
-    /* Плавающий виджет помощи и «Ищу» внизу справа (как «Сообщения 7» на Авито) */
+    
     .floating-help-widget {
       position: fixed; bottom: 24px; right: 28px; z-index: 1500;
       background: #141414; color: #fff; border-radius: 28px; padding: 10px 20px;
@@ -270,7 +270,7 @@
     }
     .floating-help-widget:hover { transform: scale(1.03); background: #262626; }
 
-    /* Кнопки и формы общего назначения */
+    
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       gap: 6px; padding: 8px 14px; border-radius: 8px; font-weight: 600;
@@ -303,7 +303,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2); animation: fadeIn 0.2s ease;
     }
 
-    /* Модальные окна */
+    
     .modal-backdrop {
       position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2500;
       display: flex; align-items: center; justify-content: center; padding: 16px;
@@ -342,7 +342,6 @@
   <script type="text/babel">
     const { useState, useEffect } = React;
     const STORAGE_KEY = 'avito_retro_real_prices_v5';
-
     function getPhotoUrl(src) {
       if (!src) return '';
       if (src.startsWith('data:') || src.startsWith('blob:') || src.startsWith('http://') || src.startsWith('https://')) {
@@ -356,7 +355,6 @@
       }
       return src;
     }
-
     const ANTIQUE_CATEGORIES = [
       { id: 'models', title: 'Ретро-модели', img: 'images/volga.jpg', count: '8 430' },
       { id: 'coins', title: 'Монеты и боны', img: 'images/coin.jpg', count: '18 400' },
@@ -371,7 +369,6 @@
       { id: 'soviet_auto', title: 'Советский автовинтаж', img: 'images/kopeika.jpg', count: '4 800' },
       { id: 'all_cat', title: 'Все категории →', isAll: true, count: '148 350' }
     ];
-
     function CarModelIllustration({ modelCode, customPhoto, height = '100%' }) {
       if (customPhoto) {
         return (
@@ -400,7 +397,6 @@
         </div>
       );
     }
-
     const ROLES = [
       { id: 'guest', name: 'Гость (не вошёл)' },
       { id: 'user_alex', name: 'Алексей (Владелец и Автор)' },
@@ -409,10 +405,9 @@
       { id: 'user_olga', name: 'Ольга (Другой коллекционер)' },
       { id: 'mod_service', name: 'Служебная модерация' },
     ];
-
     function getInitialData() {
       return {
-        experimentArm: 'C2', // C1 | C2 | C0
+        experimentArm: 'C2',
         role: 'user_alex',
         simulateSaveError: false,
         subscriptions: { authors: ['user_olga'], topic143: true },
@@ -694,7 +689,7 @@
             conditionDiff: 'Без следов цинковой чумы (вздутий металла), ровные дверцы',
             budget: 'до 8 500 ₽ (необязательно)',
             visibility: 'public',
-            status: 'active', // active | closed_found | closed_no_longer
+            status: 'active',
             modelCode: 'moskvich',
             proposals: [
               {
@@ -808,7 +803,7 @@
             markedByAuthorName: 'Алексей',
             supportingReplyIds: ['rep_1'],
             supportingVersionIds: ['v1'],
-            status: 'active_private', // active_private | active_public | inactive | revoked
+            status: 'active_private',
             archived: false,
             consentVersion: null,
             decisionId: null,
@@ -858,7 +853,6 @@
         ]
       };
     }
-
     function App() {
       const [data, setData] = useState(() => {
         try {
@@ -876,19 +870,16 @@
         } catch (e) {}
         return getInitialData();
       });
-
       const [screen, setScreen] = useState('S04');
       const [selectedCategory, setSelectedCategory] = useState('all');
       const [activeId, setActiveId] = useState('item_1');
       const [navStack, setNavStack] = useState([]);
-
-      const [colFilter, setColFilter] = useState('all'); // all | private | public | archive
-      const [wishScope, setWishScope] = useState('all'); // my | all
-      const [wishFilter, setWishFilter] = useState('active'); // active | closed
-      const [qFilter, setQFilter] = useState('all'); // all | unanswered
+      const [colFilter, setColFilter] = useState('all');
+      const [wishScope, setWishScope] = useState('all');
+      const [wishFilter, setWishFilter] = useState('active');
+      const [qFilter, setQFilter] = useState('all');
       const [searchQuery, setSearchQuery] = useState('');
       const [viewedAuthorId, setViewedAuthorId] = useState('user_olga');
-
       const [formDirty, setFormDirty] = useState(false);
       const [formError, setFormError] = useState('');
       const [itemForm, setItemForm] = useState({
@@ -900,31 +891,25 @@
         id: null, title: '', version: '', conditionDiff: '', budget: '', modelCode: 'moskvich'
       });
       const [qForm, setQForm] = useState({ id: null, title: '', context: '', linkedType: 'none', linkedId: '' });
-
       const [replyText, setReplyText] = useState('');
       const [replySource, setReplySource] = useState('');
       const [replySellerInterest, setReplySellerInterest] = useState('Помогаю без продажи (нет своей полки и объявлений)');
       const [editingReplyId, setEditingReplyId] = useState(null);
       const [clarifyText, setClarifyText] = useState('');
-
       const [s12Mode, setS12Mode] = useState('wanted');
       const [s12ListingId, setS12ListingId] = useState('list_1');
       const [s12Explanation, setS12Explanation] = useState('');
       const [s12Interest, setS12Interest] = useState('Это моё собственное объявление о продаже');
-
       const [modal, setModal] = useState(null);
       const [pendingAction, setPendingAction] = useState(null);
       const [toast, setToast] = useState('');
-
       useEffect(() => {
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
       }, [data]);
-
       const notify = (msg) => {
         setToast(msg);
         setTimeout(() => setToast(''), 4000);
       };
-
       const logEvent = (eventName, objType, objId) => {
         const entry = {
           event_id: 'evt_' + Date.now(),
@@ -938,7 +923,6 @@
         };
         setData(prev => ({ ...prev, eventLog: [entry, ...prev.eventLog.slice(0, 69)] }));
       };
-
       const navigateTo = (targetScreen, targetId = activeId, skipDirty = false) => {
         if (!skipDirty && formDirty && ['S02', 'S07', 'S10'].includes(screen)) {
           setModal({ code: 'M03', payload: { targetScreen, targetId } });
@@ -956,7 +940,6 @@
         if (targetId !== undefined) setActiveId(targetId);
         logEvent('object_view', targetScreen, targetId);
       };
-
       const goBack = (skipDirty = false) => {
         if (!skipDirty && formDirty && ['S02', 'S07', 'S10'].includes(screen)) {
           setModal({ code: 'M03', payload: { targetScreen: 'BACK' } });
@@ -973,7 +956,6 @@
           setScreen('S01');
         }
       };
-
       const requireAuth = (intentLabel, callback) => {
         if (data.role === 'guest') {
           setPendingAction({ intentLabel, callback });
@@ -982,14 +964,11 @@
         }
         return true;
       };
-
-      // Пересчёт состояния карточки «За полезную помощь» (R1 в C2) при изменении ответа или снятии «Помогло»
       const recalculateRecognition = (updatedQuestions, currentRecs, questionId, recipientId, recipientName, authorName) => {
         const q = updatedQuestions.find(x => x.id === questionId);
         if (!q) return currentRecs;
         const helpfulList = q.replies.filter(r => r.authorId === recipientId && r.helpfulByAuthor && r.authorId !== q.authorId);
         const idx = currentRecs.findIndex(r => r.questionId === questionId && r.recipientId === recipientId);
-
         if (helpfulList.length > 0) {
           if (idx === -1) {
             return [...currentRecs, {
@@ -1034,41 +1013,33 @@
         }
         return currentRecs;
       };
-
       const toggleHelpful = (questionId, replyId) => {
         const q = data.questions.find(x => x.id === questionId);
         if (!q) return;
         const rep = q.replies.find(r => r.id === replyId);
         if (!rep) return;
-
         if (data.role !== q.authorId) return notify('Отметку «Помогло» ставит только автор вопроса.');
         if (rep.authorId === data.role) return notify('Собственный ответ отметить как «Помогло» нельзя.');
         if (data.simulateSaveError) return notify('Не удалось сохранить отметку (учебный сбой сети). Повторите попытку.');
-
         const nextVal = !rep.helpfulByAuthor;
         const updatedQ = data.questions.map(quest => quest.id === questionId ? {
           ...quest,
           replies: quest.replies.map(r => r.id === replyId ? { ...r, helpfulByAuthor: nextVal } : r)
         } : quest);
-
         const updatedRecs = recalculateRecognition(updatedQ, data.recognitions, questionId, rep.authorId, rep.authorName, q.authorName);
-
         setData(prev => ({ ...prev, questions: updatedQ, recognitions: updatedRecs }));
         logEvent(nextVal ? 'helpful_marked' : 'helpful_unmarked', 'reply', replyId);
         notify(nextVal
           ? (data.experimentArm === 'C2' ? 'Отмечено «Помогло». Автор ответа получил признание за полезную помощь.' : 'Отмечено «Помогло».')
           : 'Отметка «Помогло» снята (карточка признания переведена в неактивное состояние).');
       };
-
       const currentItem = data.items.find(i => i.id === activeId) || data.items[0];
       const currentWish = data.wishes.find(w => w.id === activeId) || data.wishes[0];
       const currentQuestion = data.questions.find(q => q.id === activeId) || data.questions[0];
       const currentListing = data.listings.find(l => l.id === activeId) || data.listings[0];
       const currentRecognition = data.recognitions.find(r => r.rewardId === activeId) || data.recognitions[0];
-
       return (
         <div>
-          {/* ВЕРХНЯЯ ПОЛОСА АВИТО (ПРОДАКШН) */}
           <div className="top-nav">
             <div className="top-links">
               <span className="top-link" onClick={() => navigateTo('E00')}>Для бизнеса ⌵</span>
@@ -1100,8 +1071,6 @@
               </span>
             </div>
           </div>
-
-          {/* ГЛАВНАЯ СТРОКА ШАПКИ АВИТО */}
           <div className="header-row">
             <button className="brand-logo" onClick={() => { setSelectedCategory('all'); navigateTo('S04'); }}>
               <div className="brand-dots">
@@ -1110,11 +1079,9 @@
               </div>
               <span className="brand-text">Avito</span>
             </button>
-
             <button className="btn-all-categories" onClick={() => { setSelectedCategory('all'); navigateTo('S04'); }}>
               <span style={{ fontSize: 16 }}>☷</span> Все категории
             </button>
-
             <div className="search-box-wrap">
               <input
                 placeholder="Поиск по антиквариату, коллекциям, запросам «Ищу»..."
@@ -1126,11 +1093,9 @@
               )}
               <button className="search-btn" onClick={() => navigateTo('S04')}>Найти</button>
             </div>
-
             <button className="city-select-btn" onClick={() => notify('Выбран регион: Москва')}>
               <span>📍</span> Москва
             </button>
-
             <button className="btn btn-primary" onClick={() => {
               if (!requireAuth('Добавить предмет в коллекцию', () => {})) return;
               setItemForm({
@@ -1143,8 +1108,6 @@
               + Добавить в коллекцию
             </button>
           </div>
-
-          {/* ФИЛЬТРЫ-РУБРИКАТОРЫ АВИТО (ЧИПСЫ ДЛЯ ПЕРЕКЛЮЧЕНИЯ СЦЕНАРИЕВ) */}
           <div className="page-container" style={{ marginBottom: 0, paddingBottom: 0 }}>
             <div className="avito-filter-chips">
               <button
@@ -1153,7 +1116,6 @@
               >
                 🏛️ Витрина раритетов ({data.items.filter(i => i.visibility === 'public').length})
               </button>
-
               <button
                 className={`chip-btn ${['S06', 'S07', 'S08', 'S12'].includes(screen) ? 'active' : ''}`}
                 onClick={() => navigateTo('S06')}
@@ -1163,7 +1125,6 @@
                   {data.wishes.filter(w => w.status === 'active').length}
                 </span>
               </button>
-
               <button
                 className={`chip-btn ${['S09', 'S10', 'S11'].includes(screen) ? 'active' : ''}`}
                 onClick={() => navigateTo('S09')}
@@ -1173,7 +1134,6 @@
                   {data.questions.length}
                 </span>
               </button>
-
               <button
                 className={`chip-btn ${['S01', 'S02', 'S03'].includes(screen) ? 'active' : ''}`}
                 onClick={() => navigateTo('S01')}
@@ -1183,7 +1143,6 @@
                   {data.items.filter(i => i.ownerId === 'user_alex').length}
                 </span>
               </button>
-
               {data.showRecognitionSection && (
                 <button
                   className={`chip-btn ${['S16', 'S17'].includes(screen) ? 'active' : ''}`}
@@ -1195,14 +1154,12 @@
                   </span>
                 </button>
               )}
-
               <button
                 className={`chip-btn ${screen === 'S13' ? 'active' : ''}`}
                 onClick={() => navigateTo('S13')}
               >
                 🔔 Уведомления
               </button>
-
               <button
                 className={`chip-btn ${screen === 'S14' ? 'active' : ''}`}
                 onClick={() => navigateTo('S14')}
@@ -1212,8 +1169,6 @@
             </div>
           </div>
           <main className="page-container">
-
-            {/* E00: Точки входа */}
             {screen === 'E00' && (
               <div className="card">
                 <h2 style={{ marginTop: 0 }}>Быстрые сценарии сервиса</h2>
@@ -1244,8 +1199,6 @@
                 </div>
               </div>
             )}
-
-            {/* Моя коллекция (без ставок и ценников!) */}
             {screen === 'S01' && (
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
@@ -1272,7 +1225,6 @@
                     </button>
                   </div>
                 </div>
-
                 <div style={{ display: 'flex', gap: 8, marginBottom: 18, flexWrap: 'wrap' }}>
                   {[
                     { id: 'all', label: 'Все мои модели' },
@@ -1285,7 +1237,6 @@
                     </button>
                   ))}
                 </div>
-
                 {data.items.filter(i => i.ownerId === 'user_alex').filter(i => colFilter === 'all' || i.visibility === colFilter).length === 0 ? (
                   <div className="card" style={{ textAlign: 'center', padding: 40 }}>
                     <h3>В этом списке пока пусто</h3>
@@ -1339,8 +1290,6 @@
                 )}
               </div>
             )}
-
-            {/* S02: Форма добавления/редактирования модели */}
             {screen === 'S02' && (
               <div className="card" style={{ maxWidth: 660, margin: '0 auto' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
@@ -1348,7 +1297,6 @@
                   <span className="badge b-private">Сначала видно только вам</span>
                 </div>
                 {formError && <div style={{ background: '#fee2e2', color: '#991b1b', padding: 10, borderRadius: 8, marginBottom: 12 }}>{formError}</div>}
-
                 <div className="form-group">
                   <label className="form-label">Название модели в коллекции *</label>
                   <input className="form-input" value={itemForm.title} onChange={e => { setItemForm({ ...itemForm, title: e.target.value }); setFormDirty(true); }} placeholder="Например: Москвич-408 (А1) ранний выпуск" />
@@ -1430,7 +1378,6 @@
                       </label>
                     </div>
                   </div>
-
                   <div style={{ fontSize: 12, color: 'var(--avito-muted)', marginBottom: 6 }}>Или выберите фотографию из вашей коллекции:</div>
                   <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                     {[
@@ -1462,12 +1409,10 @@
                     ))}
                   </div>
                 </div>
-
                 <div className="form-group">
                   <label className="form-label">🔒 Личная заметка (видна только вам, не попадает в публикацию)</label>
                   <textarea className="form-textarea" rows="2" value={itemForm.privateNote} onChange={e => { setItemForm({ ...itemForm, privateNote: e.target.value }); setFormDirty(true); }} placeholder="У кого куплена, где хранится..." />
                 </div>
-
                 <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 14 }}>
                   <button className="btn btn-secondary" onClick={() => goBack()}>Отмена</button>
                   <button className="btn btn-dark" onClick={() => {
@@ -1516,8 +1461,6 @@
                 </div>
               </div>
             )}
-
-            {/* S03: Карточка предмета коллекции */}
             {screen === 'S03' && currentItem && (
               <div>
                 {(currentItem.visibility !== 'public' && data.role !== currentItem.ownerId) ? (
@@ -1551,13 +1494,11 @@
                           <div><b>Производитель:</b> {currentItem.manufacturer} · <b>Серия:</b> {currentItem.series}</div>
                           <div><b>Комплектность:</b> {currentItem.completeness} · <b>Состояние:</b> {currentItem.condition}</div>
                         </div>
-
                         {data.role === currentItem.ownerId && currentItem.privateNote && (
                           <div style={{ marginTop: 12, padding: 12, background: '#fefce8', border: '1px solid #fde047', borderRadius: 10, fontSize: 13 }}>
                             🔒 <b>Личная заметка (видна только вам):</b> {currentItem.privateNote}
                           </div>
                         )}
-
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 16 }}>
                           {data.role === currentItem.ownerId ? (
                             <>
@@ -1607,8 +1548,6 @@
                 )}
               </div>
             )}
-
-            {/* ================= S06: РАЗДЕЛ «ИЩУ» (ПОЛНОЦЕННЫЙ!) ================= */}
             {screen === 'S06' && (
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
@@ -1626,7 +1565,6 @@
                     + Создать запрос «Ищу»
                   </button>
                 </div>
-
                 <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, marginBottom: 18 }}>
                   <div style={{ display: 'flex', gap: 8 }}>
                     <button className={`btn ${wishScope === 'all' ? 'btn-dark' : 'btn-secondary'}`} onClick={() => setWishScope('all')}>Все публичные запросы</button>
@@ -1637,7 +1575,6 @@
                     <button className={`btn ${wishFilter === 'closed' ? 'btn-dark' : 'btn-secondary'}`} onClick={() => setWishFilter('closed')}>Закрытые («Найдено» / «Больше не ищу»)</button>
                   </div>
                 </div>
-
                 <div className="goods-grid">
                   {data.wishes
                     .filter(w => wishScope === 'my' ? w.authorId === 'user_alex' : (w.visibility === 'public' || w.authorId === data.role))
@@ -1679,13 +1616,10 @@
                 </div>
               </div>
             )}
-
-            {/* S07: Форма создания/изменения запроса «Ищу» */}
             {screen === 'S07' && (
               <div className="card" style={{ maxWidth: 640, margin: '0 auto' }}>
                 <h2 style={{ marginTop: 0 }}>{wishForm.id ? 'Изменить запрос «Ищу»' : 'Описать нужную модель в раздел «Ищу»'}</h2>
                 {formError && <div style={{ background: '#fee2e2', color: '#991b1b', padding: 10, borderRadius: 8, marginBottom: 12 }}>{formError}</div>}
-
                 <div className="form-group">
                   <label className="form-label">Какую модель автомобиля 1:43 вы ищете? *</label>
                   <input className="form-input" value={wishForm.title} onChange={e => { setWishForm({ ...wishForm, title: e.target.value }); setFormDirty(true); }} placeholder="Например: Ищу Москвич-408 (А1) с белым салоном" />
@@ -1702,7 +1636,6 @@
                   <label className="form-label">Необязательный бюджет (справочно, не создаёт сделку)</label>
                   <input className="form-input" value={wishForm.budget} onChange={e => { setWishForm({ ...wishForm, budget: e.target.value }); setFormDirty(true); }} placeholder="до 8 500 ₽" />
                 </div>
-
                 <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 14 }}>
                   <button className="btn btn-secondary" onClick={() => goBack()}>Отмена</button>
                   <button className="btn btn-dark" onClick={() => {
@@ -1738,8 +1671,6 @@
                 </div>
               </div>
             )}
-
-            {/* S08: Карточка запроса «Ищу» с предложениями, закрытием и возобновлением */}
             {screen === 'S08' && currentWish && (
               <div className="card">
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
@@ -1748,14 +1679,12 @@
                     {currentWish.status === 'active' ? '🔍 Поиск активен' : currentWish.status === 'closed_found' ? 'Закрыт: Найдено (самоотчёт, не означает покупку)' : 'Закрыт: Больше не ищу'}
                   </span>
                 </div>
-
                 <h1 style={{ fontSize: 22, margin: '6px 0' }}>{currentWish.title}</h1>
                 <div style={{ background: '#f8fafc', padding: 14, borderRadius: 10, marginBottom: 16 }}>
                   <div><b>Нужная версия:</b> {currentWish.version}</div>
                   <div><b>Требования к состоянию:</b> {currentWish.conditionDiff}</div>
                   <div><b>Ориентир бюджета:</b> {currentWish.budget} · <b>Автор:</b> {currentWish.authorName}</div>
                 </div>
-
                 <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
                   <button className="btn btn-secondary" onClick={() => { setWishForm({ ...currentWish }); navigateTo('S07'); }}>
                     ✏️ Изменить описание запроса
@@ -1778,7 +1707,6 @@
                     </button>
                   )}
                 </div>
-
                 <h3>Предложения с объявлениями Авито ({currentWish.proposals.length})</h3>
                 {currentWish.proposals.map(p => {
                   const listObj = data.listings.find(l => l.id === p.listingId);
@@ -1803,8 +1731,6 @@
                 })}
               </div>
             )}
-
-            {/* S09: Сценарий помощи и вопросов */}
             {screen === 'S09' && (
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
@@ -1822,12 +1748,10 @@
                     + Задать вопрос
                   </button>
                 </div>
-
                 <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
                   <button className={`btn ${qFilter === 'all' ? 'btn-dark' : 'btn-secondary'}`} onClick={() => setQFilter('all')}>Все вопросы</button>
                   <button className={`btn ${qFilter === 'unanswered' ? 'btn-dark' : 'btn-secondary'}`} onClick={() => setQFilter('unanswered')}>Вопросы без ответа</button>
                 </div>
-
                 <div className="goods-grid">
                   {data.questions
                     .filter(q => qFilter === 'all' || q.replies.length === 0)
@@ -1851,8 +1775,6 @@
                 </div>
               </div>
             )}
-
-            {/* S10: Форма нового вопроса */}
             {screen === 'S10' && (
               <div className="card" style={{ maxWidth: 640, margin: '0 auto' }}>
                 <h2 style={{ marginTop: 0 }}>Новый вопрос экспертам сообщества 1:43</h2>
@@ -1884,15 +1806,12 @@
                 </div>
               </div>
             )}
-
-            {/* S11: Ветка вопроса, ответы, уточнения и отметка «Помогло» */}
             {screen === 'S11' && currentQuestion && (
               <div className="card">
                 <button className="btn btn-secondary" onClick={() => goBack()} style={{ marginBottom: 12 }}>← Назад к вопросам</button>
                 <div style={{ fontSize: 12, color: 'var(--avito-muted)' }}>Автор вопроса: <b>{currentQuestion.authorName}</b> · {currentQuestion.createdAt}</div>
                 <h1 style={{ fontSize: 22, margin: '6px 0' }}>{currentQuestion.title}</h1>
                 <p style={{ background: '#f8fafc', padding: 12, borderRadius: 10 }}>{currentQuestion.context}</p>
-
                 <h3 style={{ marginTop: 20 }}>Ответы участников ({currentQuestion.replies.length})</h3>
                 {currentQuestion.replies.length === 0 ? (
                   <div style={{ padding: 20, background: '#fefce8', borderRadius: 10, marginBottom: 16 }}>
@@ -1922,8 +1841,6 @@
                         </div>
                       </div>
                       <p style={{ margin: '10px 0' }}>{rep.text}</p>
-
-                      {/* Уточнения к ответу */}
                       {rep.clarifications && rep.clarifications.map(c => (
                         <div key={c.id} style={{ marginLeft: 16, padding: '6px 10px', background: '#f1f5f9', borderRadius: 8, fontSize: 13, marginTop: 6 }}>
                           <b>Уточнение ({c.authorName}):</b> {c.text}
@@ -1950,8 +1867,6 @@
                     </div>
                   ))
                 )}
-
-                {/* Поле ответа (пустое по умолчанию, без бонусов в кнопке) */}
                 <div className="card" style={{ background: '#f8fafc', marginTop: 16 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
                     <h3 style={{ margin: 0 }}>{editingReplyId ? 'Редактирование ответа (сбросит прежнее «Помогло»)' : 'Написать ответ (полка и продажа не обязательны)'}</h3>
@@ -1972,7 +1887,6 @@
                     <button className="btn btn-primary" onClick={() => {
                       if (!replyText.trim()) return notify('Поле ответа пустое — введите текст.');
                       if (editingReplyId) {
-                        // При редактировании ответа отметка «Помогло» сбрасывается, а карточка признания R1 становится неактивной до новой отметки!
                         const updatedQ = data.questions.map(q => q.id === currentQuestion.id ? {
                           ...q,
                           replies: q.replies.map(r => r.id === editingReplyId ? {
@@ -2008,8 +1922,6 @@
                 </div>
               </div>
             )}
-
-            {/* S12: Предложить объявление к запросу «Ищу» */}
             {screen === 'S12' && (
               <div className="card" style={{ maxWidth: 640, margin: '0 auto' }}>
                 <h2 style={{ marginTop: 0 }}>Предложить объявление Авито по запросу «Ищу»</h2>
@@ -2051,19 +1963,14 @@
                 </div>
               </div>
             )}
-
-            {/* S04 & S05: Сообщество и Открытая полка */}
             {(screen === 'S04' || screen === 'S05') && (
               <div>
                 {screen === 'S04' ? (
                   <div>
-                    {/* Заголовок страницы с серым числом лотов со скриншота */}
                     <div className="category-heading">
                       <span>Антиквариат и коллекционирование в Москве</span>
                       <span className="category-count">148 350</span>
                     </div>
-
-                    {/* Верхний блок: 12 категорий слева + юридический блок справа со скриншота */}
                     <div className="hero-categories-layout">
                       <div className="pills-grid">
                         {ANTIQUE_CATEGORIES.map(cat => (
@@ -2093,8 +2000,6 @@
                           </div>
                         ))}
                       </div>
-
-                      {/* Юридический блок Авито справа со скриншота */}
                       <div className="hero-legal-sidebar">
                         <div>© ООО «КЕХ еКоммерц» 2007–2026.</div>
                         <div style={{ marginTop: 4, color: '#757575' }}>
@@ -2108,10 +2013,7 @@
                         </div>
                       </div>
                     </div>
-
-                    {/* ФИРМЕННЫЙ ДВУХБЛОЧНЫЙ БАННЕР АВИТО: ВОТ ОПТИМАЛЬНОЕ МЕСТО ДЛЯ «ИЩУ» И «СЦЕНАРИЯ ПОМОЩИ» */}
                     <div className="promo-banners-row">
-                      {/* Блок 1: Стол находок «Ищу» */}
                       <div className="avito-feature-card wish-theme">
                         <div className="feature-card-content">
                           <div className="feature-badge">🔍 Стол находок</div>
@@ -2141,8 +2043,6 @@
                         </div>
                         <div className="art-circle wish-circle">🔍</div>
                       </div>
-
-                      {/* Блок 2: Клуб знатоков и помощь */}
                       <div className="avito-feature-card help-theme">
                         <div className="feature-card-content">
                           <div className="feature-badge badge-green">💬 Клуб знатоков</div>
@@ -2171,7 +2071,6 @@
                         <div className="art-circle help-circle">💡</div>
                       </div>
                     </div>
-
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
                       <div className="section-title-arrow">Редкие находки и предметы в коллекциях ➔</div>
                       <button className="btn btn-outline" onClick={() => {
@@ -2191,8 +2090,6 @@
                     <button className="btn btn-secondary" onClick={() => navigateTo('S04')}>← Назад к витрине</button>
                   </div>
                 )}
-
-                {/* Опубликованные карточки признания в открытой полке */}
                 {data.showRecognitionSection && (
                   data.recognitions.filter(r => r.status === 'active_public' && !r.archived).map(rec => (
                     <div key={rec.rewardId} className="card" style={{ background: '#f0fdf4', borderColor: '#86efac', marginBottom: 16, flexDirection: 'row', alignItems: 'center' }}>
@@ -2205,8 +2102,6 @@
                     </div>
                   ))
                 )}
-
-                {/* Товарная витрина карточек Авито */}
                 <div className="goods-grid">
                   {data.items
                     .filter(i => screen === 'S05' ? (i.ownerId === viewedAuthorId && i.visibility === 'public') : i.visibility === 'public')
@@ -2240,7 +2135,6 @@
                               ♥
                             </button>
                           </div>
-
                           <div className="item-price-tag">{item.price || 'Экземпляр коллекции'}</div>
                           <h3 style={{ margin: '4px 0 6px', fontSize: 15, fontWeight: 600, lineHeight: 1.3, cursor: 'pointer' }} onClick={() => navigateTo('S03', item.id)}>
                             {item.title}
@@ -2252,7 +2146,6 @@
                             {item.location || 'Москва, Центр'} · {item.date || 'Сегодня в 12:00'}
                           </div>
                         </div>
-
                         <div style={{ display: 'flex', gap: 6, marginTop: 12 }}>
                           <button className="btn btn-secondary" style={{ flex: 1 }} onClick={() => navigateTo('S03', item.id)}>
                             Подробнее в полке
@@ -2268,8 +2161,6 @@
                 </div>
               </div>
             )}
-
-            {/* Уведомления с прямым переходом к ответу или предложению */}
             {screen === 'S13' && (
               <div className="card" style={{ maxWidth: 720, margin: '0 auto' }}>
                 <h2 style={{ marginTop: 0 }}>🔔 Уведомления</h2>
@@ -2289,8 +2180,6 @@
                 ))}
               </div>
             )}
-
-            {/* S14: Подписки и настройки уведомлений */}
             {screen === 'S14' && (
               <div className="card" style={{ maxWidth: 680, margin: '0 auto' }}>
                 <h2 style={{ marginTop: 0 }}>⚙️ Подписки и настройки темы</h2>
@@ -2321,8 +2210,6 @@
                 <button className="btn btn-primary" onClick={() => notify('Настройки уведомлений сохранены.')}>Сохранить настройки</button>
               </div>
             )}
-
-            {/* S15: Материал недоступен */}
             {screen === 'S15' && (
               <div className="card" style={{ maxWidth: 560, margin: '30px auto', textAlign: 'center', padding: 36 }}>
                 <h2>Материал временно недоступен</h2>
@@ -2330,8 +2217,6 @@
                 <button className="btn btn-primary" onClick={() => navigateTo('S01', undefined, true)}>Вернуться в коллекцию</button>
               </div>
             )}
-
-            {/* S16 & S17: Карточки «За полезную помощь» (вариант с наградами C2) */}
             {(screen === 'S16' || screen === 'S17') && currentRecognition && (
               <div className="card" style={{ maxWidth: 700, margin: '0 auto' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
@@ -2343,7 +2228,6 @@
                     {currentRecognition.status === 'revoked' && '⚠️ Отменена модерацией'}
                   </span>
                 </div>
-
                 <div style={{ padding: 18, background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 12, marginBottom: 16 }}>
                   <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>«Автор вопроса отметил ответ как полезный»</div>
                   <div><b>Получатель благодарности:</b> {currentRecognition.recipientName}</div>
@@ -2352,7 +2236,6 @@
                     Это символическая благодарность без баллов, скидок, ранга и звания эксперта. Помощь не требует покупки.
                   </div>
                 </div>
-
                 <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                   {currentRecognition.status === 'active_private' && (
                     <button className="btn btn-primary" onClick={() => setModal({ code: 'M07', payload: currentRecognition })}>
@@ -2376,8 +2259,6 @@
                 </div>
               </div>
             )}
-
-            {/* A01, A04, A05: Обычный путь Авито (объявление, чат, покупка) */}
             {screen === 'A01' && currentListing && (
               <div className="card" style={{ maxWidth: 800, margin: '0 auto' }}>
                 <button className="btn btn-secondary" onClick={() => goBack()} style={{ marginBottom: 12 }}>← Вернуться в Полки</button>
@@ -2399,7 +2280,6 @@
                 )}
               </div>
             )}
-
             {(screen === 'A04' || screen === 'A05') && (
               <div className="card" style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center', padding: 32 }}>
                 <h2>{screen === 'A04' ? 'Чат покупателя и продавца' : 'Заказ получен и завершён'}</h2>
@@ -2420,10 +2300,7 @@
                 </div>
               </div>
             )}
-
           </main>
-
-          {/* ================= МОДАЛЬНЫЕ ОКНА M01–M07 ================= */}
           {modal && modal.code === 'M01' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" onClick={e => e.stopPropagation()}>
@@ -2443,7 +2320,6 @@
               </div>
             </div>
           )}
-
           {modal && modal.code === 'M02' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" onClick={e => e.stopPropagation()}>
@@ -2465,7 +2341,6 @@
               </div>
             </div>
           )}
-
           {modal && modal.code === 'M03' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" onClick={e => e.stopPropagation()}>
@@ -2482,7 +2357,6 @@
               </div>
             </div>
           )}
-
           {modal && modal.code === 'M04' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" onClick={e => e.stopPropagation()}>
@@ -2504,7 +2378,6 @@
               </div>
             </div>
           )}
-
           {modal && modal.code === 'M06' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" onClick={e => e.stopPropagation()}>
@@ -2521,7 +2394,6 @@
               </div>
             </div>
           )}
-
           {modal && modal.code === 'M07' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" onClick={e => e.stopPropagation()}>
@@ -2543,7 +2415,6 @@
               </div>
             </div>
           )}
-
           {modal && modal.code === 'LOG' && (
             <div className="modal-overlay" onClick={() => setModal(null)}>
               <div className="modal-window" style={{ maxWidth: 780 }} onClick={e => e.stopPropagation()}>
@@ -2561,18 +2432,14 @@
               </div>
             </div>
           )}
-
-                    {/* Плавающий виджет быстрого доступа к помощи и «Ищу» (как плашка «Сообщения 7» на Авито) */}
           <div className="floating-help-widget" onClick={() => navigateTo('S09')}>
             <span>💬</span> Клуб знатоков и «Ищу»
             <span style={{ background: '#ff4053', color: '#fff', borderRadius: '50%', padding: '1px 6px', fontSize: 11, fontWeight: 800 }}>3</span>
           </div>
-
           {toast && <div className="toast-box">{toast}</div>}
         </div>
       );
     }
-
     ReactDOM.createRoot(document.getElementById('root')).render(<App />);
   </script>
 </body>
